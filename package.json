@@ -1,0 +1,15 @@
+{
+  "name": "health-calculator",
+  "version": "1.0.0",
+  "description": "Calculadora de IMC e macronutrientes",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["imc", "calculadora", "macronutrientes", "saude"],
+  "author": "Raul Guimaraes",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
