@@ -6,6 +6,10 @@
   "scripts": {
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rguima17/health-calc.git"
+  },
   "keywords": ["imc", "calculadora", "macronutrientes", "saude"],
   "author": "Raul Guimaraes",
   "license": "ISC",
