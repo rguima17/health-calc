@@ -15,6 +15,9 @@ class IMCCalculator {
      * @return {number} 
      */
     static calculate(weight, height) {
+        if (arguments.length !== 2) {
+            throw new Error("Método calculate espera exatos dois argumentos.");
+        }
         if (typeof weight !== 'number' || typeof height !== 'number') {
             throw new TypeError("Input Inválido: Peso e altura devem ser números.");
         }
@@ -29,6 +32,10 @@ class IMCCalculator {
      * @return {string}
      */
     static classify(imc) {
+        if (arguments.length !== 1) {
+            throw new Error("Método classify espera apenas um argumento.");
+        }
+
         if (imc < IMCCalculator.IMC_THRESHOLDS.ABAIXO_DO_PESO) {
             return "Abaixo do peso";
         } else if (imc <= IMCCalculator.IMC_THRESHOLDS.NORMAL) {
