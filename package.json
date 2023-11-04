@@ -1,6 +1,6 @@
 {
   "name": "health-calculator-puc",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Calculadora de IMC e macronutrientes",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/rguima17/health-calc.git"
   },
-  "keywords": ["imc", "calculadora", "macronutrientes", "saude"],
+  "keywords": [
+    "imc",
+    "calculadora",
+    "macronutrientes",
+    "saude"
+  ],
   "author": "Raul Guimaraes",
   "license": "ISC",
   "devDependencies": {
