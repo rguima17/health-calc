@@ -10,30 +10,30 @@ class IMCCalculator {
         };
     }
     /**
-     * @param {number} weight 
-     * @param {number} height 
+     * @param {number} peso 
+     * @param {number} altura 
      * @return {number} 
      */
-    static calculate(weight, height) {
+    static calcular(peso, altura) {
         if (arguments.length !== 2) {
-            throw new Error("Método calculate espera exatos dois argumentos.");
+            throw new Error("Método 'calcular' espera exatos dois argumentos.");
         }
-        if (typeof weight !== 'number' || typeof height !== 'number') {
+        if (typeof peso !== 'number' || typeof altura !== 'number') {
             throw new TypeError("Input Inválido: Peso e altura devem ser números.");
         }
-        if (weight <= 0 || height <= 0) {
+        if (peso <= 0 || altura <= 0) {
             throw new RangeError("Input Inválido: Peso e altura devem ser números positivos.");
         }
-        return Number((weight / (height * height)).toFixed(2));
+        return Number((peso / (altura * altura)).toFixed(2));
     }
 
     /**
      * @param {number} imc 
      * @return {string}
      */
-    static classify(imc) {
+    static classificar(imc) {
         if (arguments.length !== 1) {
-            throw new Error("Método classify espera apenas um argumento.");
+            throw new Error("Método 'classificar' espera apenas um argumento.");
         }
 
         if (imc < IMCCalculator.IMC_THRESHOLDS.ABAIXO_DO_PESO) {
