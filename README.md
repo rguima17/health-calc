@@ -24,6 +24,6 @@ let classificacao = IMCCalculator.classificar(imc)
 ```javascript
 const  { MacroCalculator, genero, atividade, objetivo}  = require('health-calculator-js');
 
-let tmb = MacroCalculator.calcularTBM(peso, altura, idade, genero)
-let macronutrientes = MacroCalculator.calcularMacros(80, 1.80, 35, genero.MASCULINO, atividade.SEDENTARIO, objetivo.BULKING)
+let tmb = MacroCalculator.calcularTMB(peso, altura, idade, genero)
+let macronutrientes = MacroCalculator.calcularMacros(peso, altura, idade, genero.MASCULINO, atividade.SEDENTARIO, objetivo.BULKING)
 ```

@@ -26,7 +26,7 @@ class MacroCalculator {
      * @param {string} objetivo - BULKING, CUTTING, MANTER
      */
 
-    static calcularTBM(peso, altura, idade, genero) {
+    static calcularTMB(peso, altura, idade, genero) {
         if (peso <= 0 || altura <= 0 || idade <= 0) {
             throw new Error("Peso, altura e idade devem ser números positivos.");
         }
@@ -37,28 +37,28 @@ class MacroCalculator {
             throw new Error("Gênero especificado inválido. Escolha entre 'MASCULINO' ou 'FEMININO' ");
         }
         // Calculo da Taxa Metabólica Basal (TMB) - Formula de Mifflin-St.Jeor 
-        let tbm;
+        let tmb;
         if (genero === generos.MASCULINO) {
-            tbm = (10 * peso) + (6.25 * altura * 100) - (5 * idade) + 5;
+            tmb = (10 * peso) + (6.25 * altura * 100) - (5 * idade) + 5;
         } else {
-            tbm = (10 * peso) + (6.25 * altura * 100) - (5 * idade) - 161;
+            tmb = (10 * peso) + (6.25 * altura * 100) - (5 * idade) - 161;
         }
-        return tbm;
+        return tmb;
     }
 
     // Calculo do TDEE “Total Daily Energy Expenditure” (“Gasto Energético Total Diário")
-    static calcularTDEE(tbm, atividade) {
+    static calcularTDEE(tmb, atividade) {
         const fator = atividadeFator[atividade];
         if (!fator) {
             throw new Error("Nível de atividade inválido. Escolha entre 'SEDENTARIO', 'POUCO ATIVO', 'MODERADAMENTE ATIVO', ou 'MUITO ATIVO'");
         }
-        return tbm * fator;
+        return tmb * fator;
     }
 
     // Calculo da quantidade de proteinas, carboidratos e gordura em gramas.
     static calcularMacros(peso, altura, idade, genero, atividade, objetivo) {
-        const tbm = this.calcularTBM(peso, altura, idade, genero);
-        const tdee = this.calcularTDEE(tbm, atividade);
+        const tmb = this.calcularTMB(peso, altura, idade, genero);
+        const tdee = this.calcularTDEE(tmb, atividade);
         const ajusteCalorias = objetivoFator[objetivo];
         
         if (!ajusteCalorias && ajusteCalorias !== 0) {
