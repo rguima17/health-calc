@@ -43,7 +43,7 @@ class MacroCalculator {
         } else {
             tmb = (10 * peso) + (6.25 * altura * 100) - (5 * idade) - 161;
         }
-        return tmb;
+        return parseFloat(tmb.toFixed(2));
     }
 
     // Calculo do TDEE “Total Daily Energy Expenditure” (“Gasto Energético Total Diário")
@@ -52,7 +52,7 @@ class MacroCalculator {
         if (!fator) {
             throw new Error("Nível de atividade inválido. Escolha entre 'SEDENTARIO', 'POUCO ATIVO', 'MODERADAMENTE ATIVO', ou 'MUITO ATIVO'");
         }
-        return tmb * fator;
+        return parseFloat((tmb * fator).toFixed(2));
     }
 
     // Calculo da quantidade de proteinas, carboidratos e gordura em gramas.

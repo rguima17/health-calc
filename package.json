@@ -1,6 +1,6 @@
 {
   "name": "health-calculator-js",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Calculadora de IMC e macronutrientes",
   "main": "src/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "TDEE"
   ],
   "author": "Raul Guimaraes",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "jest": "^29.7.0"
   }
